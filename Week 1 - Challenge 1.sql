@@ -57,6 +57,7 @@ SELECT
     customer_id 
     , first_name 
     , last_name 
+    , email
     , supplier_id 
     , supplier_name
     , distance_km
