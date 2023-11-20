@@ -1,3 +1,5 @@
+/*PART 1
+SQL Challenge*/
 WITH urgent_orders AS (
     SELECT 
         o.o_orderkey AS order_key
@@ -66,3 +68,19 @@ LEFT JOIN urgent_orders AS u3 ON
     u3.rank_part = 3
 ORDER BY last_order_date DESC
 LIMIT 100
+
+
+/*PART 2
+Candidate's Submission*/
+
+/*
+--- Do you agree with the results returned by the query?
+No, I think there's a mistake in candidate's submission. They already filtered the top 3 highest price per part before
+getting the latest order date, and the top 3 order total. This will make the result inaccurate.
+
+And they do inner join to top 2 and top 3 highest rank. There are customers who only order 1 or 2 products and they 
+won't be included because of the inner join.
+
+--- Is it easy to understand?
+Yes 
+*/
